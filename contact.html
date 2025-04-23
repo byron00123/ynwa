@@ -204,31 +204,37 @@
                                     <h3 class='fs-xx-lg'>Feel Free To Contact With Us.</h3>
                                     <p class="p-text mt-3">We're always ready to assist you. Whether you're looking for recruitment solutions, business inquiries, or general support, our team is here to help. Reach out to us today and let's start the conversation.</p>
                                 </div>
-                                <form class="mt-5">
+                                <form class="mt-5" method="POST" action="https://api.web3forms.com/submit">
+                                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                                
                                     <div class="row">
                                         <div class="mb-3 col-sm-6">
-                                            <input type="text" class="form-control" placeholder="Your name">
+                                            <input type="text" class="form-control" name="name" placeholder="Your name" required>
                                         </div>
                                         <div class="mb-3 col-sm-6">
-                                            <input type="text" class="form-control" placeholder="Your Email">
+                                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="mb-3 col-sm-6">
-                                            <input type="text" class="form-control" placeholder="Phone Number">
+                                            <input type="text" class="form-control" name="phone" placeholder="Phone Number">
                                         </div>
                                         <div class="mb-3 col-sm-6">
-                                            <input type="text" class="form-control" placeholder="Subject">
+                                            <input type="text" class="form-control" name="subject" placeholder="Subject">
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <textarea class="form-control" placeholder="Message"></textarea>
+                                        <textarea class="form-control" name="message" placeholder="Message" required></textarea>
                                     </div>
+                                
+                                    <!-- Optional: Redirect after submission -->
+                                    <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you">
+                                
                                     <div>
-                                        <button type="submit" class="btn btn-primary w-100 text-uppercase">Send a
-                                            message</button>
+                                        <button type="submit" class="btn btn-primary w-100 text-uppercase">Send a message</button>
                                     </div>
                                 </form>
+                                
                             </div>
                             <div class="contact-r mt-5 mt-lg-0 col-lg-6">
                                 <div class="map h-100">
